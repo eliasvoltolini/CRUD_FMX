@@ -1,0 +1,112 @@
+object FrmCRUD: TFrmCRUD
+  Left = 0
+  Top = 0
+  ClientHeight = 600
+  ClientWidth = 360
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyUp = FormKeyUp
+  OnMouseUp = FormMouseUp
+  OnFocusChanged = FormFocusChanged
+  OnVirtualKeyboardShown = FormVirtualKeyboardShown
+  OnVirtualKeyboardHidden = FormVirtualKeyboardHidden
+  DesignerMasterStyle = 3
+  object laMainForm: TLayout
+    Align = Client
+    Size.Width = 360.000000000000000000
+    Size.Height = 540.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object VertScrollBox: TVertScrollBox
+      Align = Client
+      Size.Width = 360.000000000000000000
+      Size.Height = 540.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnMouseUp = FormMouseUp
+      Viewport.Width = 360.000000000000000000
+      Viewport.Height = 540.000000000000000000
+      object tabControl: TTabControl
+        Align = Client
+        Size.Width = 360.000000000000000000
+        Size.Height = 540.000000000000000000
+        Size.PlatformDefault = False
+        TabHeight = 49.000000000000000000
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = None
+        OnMouseUp = FormMouseUp
+        Sizes = (
+          360s
+          540s)
+        object tabN01: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+        end
+      end
+    end
+  end
+  object recMenu: TRectangle
+    Align = Top
+    Fill.Color = xFF01577A
+    Size.Width = 360.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    OnMouseUp = FormMouseUp
+    object btnBack: TSpeedButton
+      Align = Left
+      StyledSettings = [Family, Style]
+      IconTintColor = claWhite
+      Position.Y = 6.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.FontColor = claWhite
+      OnClick = btnBackClick
+    end
+    object lbTitle: TText
+      Align = Left
+      AutoSize = True
+      Margins.Left = 10.000000000000000000
+      Position.X = 58.000000000000000000
+      Size.Width = 56.647140502929690000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'T'#237'tulo'
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Leading
+    end
+    object btnNext: TSpeedButton
+      Tag = 1
+      Align = Right
+      StyledSettings = [Family, Style]
+      IconTintColor = claWhite
+      Position.X = 312.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'nexttoolbutton'
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.FontColor = claWhite
+      OnClick = btnNextClick
+    end
+  end
+end
